@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements YctJsBridge,View.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        handler = new Handler();
         initWidgets(savedInstanceState);
     }
 
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity implements YctJsBridge,View.
         layout_main_wv.addJavascriptInterface(new YctJsInterface(this),"yctjsinterface");
         layout_main_wv.loadUrl("file:///android_asset/testjavascript.html");
 
-        handler = new Handler();
+        //只在api19以上才存在，这个是设置利用chrome可以调试，在chrome中要输入chrome://inspect/#devices
+        layout_main_wv.setWebContentsDebuggingEnabled(true);
     }
 
     @Override
