@@ -19,5 +19,21 @@
         android:layout_marginTop="16dp"
         android:textSize="20sp"
         tools:text ="12345" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/layout_main_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"/>
+        <Button
+            android:id="@+id/layout_main_btn_send"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"/>
+    </LinearLayout>
 
 </LinearLayout>

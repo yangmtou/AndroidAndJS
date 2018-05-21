@@ -26,13 +26,17 @@
 	var btnEle = document.getElementById("btn1");
 	var inputEle = document.getElementById("input");
 	btnEle.addEventListener("click",function(){
-		var text = inputEle.value;
+			var text = inputEle.value;
 			if (window.yctjsinterface) {
 				yctjsinterface.setValue(text);
 			}else{
 				alert("yctjsinterface not found");
 			}
 	});
+
+	var fromAndroid = function(str){
+		inputEle.value=str;
+	}
 </script>
 </body>
 </html>
